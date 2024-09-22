@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <script src="https://use.fontawesome.com/72f3d00eee.js"></script>
+</head>
+
+<body>
+
+    <input type="checkbox" id="check">
+    <!--header area start-->
+    <header style="padding-top: 0px;">
+        <label for="check">
+            <i style="padding-left: 60px;margin-top: 17px;" class="fas fa-bars" id="sidebar_btn"></i>
+        </label>
+        <div class="left_area">
+            <h3>Insurance Management</h3>
+        </div>
+        <div class="right_area">
+            <a href="/thankyou" class="logout_btn">Logout</a>
+        </div>
+    </header>
+   
+    <!--sidebar start-->
+    <div class="sidebar" style="margin-top:60px;">
+        <div class="sidebaritem">
+        <img [src]="images[0]" class="profile_image" alt="profile_image">
+        <h3 style="color: white;">Admin</h3>
+        <a routerLink="/admin"><i class="fas fa-tachometer-alt"></i><span>  Dashboard</span></a>
+        <a routerLink="/all" routerLinkActive="Active"><i class="fab fa-product-hunt"></i><span>  Customer</span></a>
+        <a routerLink="/category" routerLinkActive="Active"><i class="fas fa-history"></i><span>  Category</span></a>
+        <a  routerLinkActive="active"><i class="fas fa-question-circle"></i><span>  Policy</span></a>
+        <a routerLink="/all5" routerLinkActive="Active"><i class="fas fa-sync-alt"></i><span>  Questions</span></a>
+        </div>
+    </div>
+    <!--sidebar end-->
+
+
+    <div class="container">
+
+        <div class="row">
+            <div class="colorcard">
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-block">
+                            <h4 class="card-title"><a routerLink="/view">View Policy</a></h4>
+                            <i class='fas fa-eye'></i>
+                          
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-block">
+                            <h4 class="card-title"><a routerLink="/add4">Add Policy</a></h4>
+                            <i class='fas fa-pencil-alt'></i>
+                           
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-block">
+                            <h4 class="card-title"><a routerLink="/all4">Update Policy</a></h4>
+                            <i class='fas fa-prescription-bottle'></i>
+                          
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-block">
+                            <h4 class="card-title"><a routerLink="/all4">Delete Policy</a></h4>
+                            <i class='fas fa-thumbtack'></i>
+                      
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="colorcard">
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-block">
+                            <h4 class="card-title"><a routerLink="/manishappview">Total Applied Policy Holder</a></h4>
+                            <i class='fas fa-user-alt'></i>
+                          
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-block">
+                            <h4 class="card-title"><a routerLink="/all6">Approved Policy Holder</a></h4>
+                            <i class='fas fa-user-check'></i>
+                         
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-block">
+                            <h4 class="card-title"><a routerLink="/all6">Disapproved Policy Holdey</a></h4>
+                            <i class='fas fa-user-times'></i>
+                          
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-block">
+                            <h4 class="card-title"><a routerLink="/manishappview"> Waiting Approval</a></h4>
+                            <i class='fas fa-user-clock'></i>
+                          
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

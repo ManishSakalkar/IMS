@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <script src="https://use.fontawesome.com/72f3d00eee.js"></script>
+</head>
+
+<body>
+
+    <input type="checkbox" id="check">
+    <!--header area start-->
+    <header style="padding-top: 0px;">
+        <label for="check">
+            <i style="padding-left: 60px;margin-top: 17px;" class="fas fa-bars" id="sidebar_btn"></i>
+        </label>
+        <div class="left_area">
+            <h3>Insurance Management</h3>
+        </div>
+        <div class="right_area">
+            <a href="/thankyou" class="logout_btn">Logout</a>
+        </div>
+    </header>
+   
+    <!--sidebar start-->
+    <div class="sidebar" style="margin-top:60px;">
+        <div class="sidebaritem">
+        <img [src]="images[0]" class="profile_image" alt="profile_image">
+        <h3 style="color: white;">Customer</h3>
+        <a routerLink="/customerdashboard"><i class="fas fa-tachometer-alt"></i><span> Dashboard</span></a>
+        <a routerLink="/add6" routerLinkActive="Active"><i class="fab fa-product-hunt"></i><span>Apply Policy</span></a>
+        <a routerLink="/manishappview" routerLinkActive="Active"><i class="fas fa-history"></i><span>  History</span></a>
+        <a routerLink="/add5" routerLinkActive="active"><i class="fas fa-question-circle"></i><span>  Ask Question</span></a>
+        <a routerLink="/problemview" routerLinkActive="Active"><i class="fas fa-sync-alt"></i><span>  Question History</span></a>
+        </div>
+    </div>
+    <!--sidebar end-->
+
+
+    <div class="container">
+        <div class="Table">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h6 class="panel-title">Add Problem</h6>
+                </div>
+                <form (ngSubmit)="createProblem()">
+                    <!-- row#1 -->
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label for="policyname">Problem</label>
+                                <input type="text" [(ngModel)]="problem.problemname" name="problemname" class="form-control"
+                                    placeholder="Enter Problem" required />
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label for="category">Date</label>
+                                <input type="date" [(ngModel)]="problem.todayd" name="todayd"
+                                    class="form-control" placeholder="Enter Date" required />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="row">
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label for="comment">Comment</label>
+                                <input type="text" [(ngModel)]="problem.message" name="message" class="form-control"
+                                    placeholder="Enter Comment" required />
+                            </div>
+                        </div>
+                        
+                    </div> -->
+
+
+                    <input type="submit" value="Add Problem" class="btn btn-info" />
+                </form>
+                <span class="text-info">{{message}}</span>
+
+            </div>
+
+        </div>
+</div>
+</body>
+
+</html>

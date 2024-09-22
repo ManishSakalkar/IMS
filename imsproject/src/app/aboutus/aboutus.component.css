@@ -1,0 +1,398 @@
+
+body {
+    color: #757575;
+    background: #ffffff;
+    font-family: 'open sans', sans-serif;
+  }
+  
+  
+  h2{
+    color:darkblue;
+    font-family: 'Nunito', sans-serif;
+  }
+  
+  a {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    color:darkblue;
+    transition: .3s;
+  }
+  
+  a:hover,
+  a:active,
+  a:focus {
+    color: #719a0a;
+    outline: none;
+    text-decoration: none;
+  }
+  
+  
+  
+  .page-header {
+    position: relative;
+    margin-bottom: 45px;
+    padding: 150px 0 90px 0;
+    text-align: center;
+    /* background-image: url('../assets/2.webp'); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .page-header h2 {
+    position: relative;
+    color:white;
+    font-size: 60px;
+    font-weight: 700;
+  }
+  
+  .page-header a {
+    position: relative;
+    padding: 0 12px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  
+  .page-header a:hover {
+    color: #ffffff;
+  }
+  
+  .page-header a::after {
+    position: absolute;
+    content: "/";
+    width: 8px;
+    height: 8px;
+    top: -1px;
+    right: -7px;
+    text-align: center;
+    color:white;
+  }
+  
+  .page-header a:last-child::after {
+    display: none;
+  }
+  
+  @media (max-width: 767.98px) {
+    .page-header h2 {
+        font-size: 35px;
+    }
+    
+    .page-header a {
+        font-size: 18px;
+    }
+  }
+  
+  
+  
+  .section-header {
+    position: relative;
+    margin-bottom: 45px;
+  }
+  
+  .section-header p {
+    color: #719a0a;
+    margin-bottom: 5px;
+    position: relative;
+    font-size: 20px;
+  }
+  
+  .section-header h2 {
+    margin: 0;
+    position: relative;
+    font-size: 45px;
+    font-weight: 700;
+  }
+  
+  @media (max-width: 991.98px) {
+    .section-header h2 {
+        font-size: 40px;
+        font-weight: 600;
+    }
+  }
+  
+  @media (max-width: 767.98px) {
+    .section-header h2 {
+        font-size: 35px;
+        font-weight: 600;
+    }
+  }
+  
+  @media (max-width: 575.98px) {
+    .section-header h2 {
+        font-size: 30px;
+        font-weight: 600;
+    }
+  }
+  
+  
+  
+  
+  .insurance {
+    position: relative;
+    width: 100%;
+    padding: 90px 0 60px 0;
+    margin: 45px 0;
+    background: rgba(0, 0, 0, .04);
+    
+  }
+  
+  .insurance .insurance-policy {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 50px 30px 30px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .08);
+    transition: .10s;
+  }
+  
+  .insurance .insurance-policy:hover {
+    box-shadow: none;
+    background-color:darkgray;
+  }
+  
+  .insurance .insurance-policy i {
+    position: relative;
+    display: inline-block;
+    color: darkblue;
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 20px;
+    transition: .3s;
+  }
+  
+  .insurance .insurance-policy:hover i {
+    color: #719a0a;
+  }
+  
+  .insurance .insurance-policy i::after {
+    position: absolute;
+    content: "";
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    top: -20px;
+    left: -15px;
+    border: 3px dotted darkblue;
+    border-right: transparent;
+    border-bottom: transparent;
+    border-radius: 100px;
+    transition: .3s;
+  }
+  
+  .insurance .insurance-policy:hover i::after {
+    border: 3px dotted #719a0a;
+    border-right: transparent;
+    border-bottom: transparent;
+  }
+  
+  .insurance .insurance-policy h2 {
+    font-size: 30px;
+    font-weight: 700;
+  }
+  
+  .insurance .insurance-policy a {
+    position: relative;
+    font-size: 16px;
+  }
+  
+  .insurance .insurance-policy a::after {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 1px;
+    bottom: 0;
+    left: calc(50% - 25px);
+    background: darkblue;
+    transition: .3s;
+  }
+  
+  .insurance .insurance-policy a:hover::after {
+    width: 100%;
+    left: 0;
+    background: #719a0a;
+  }
+  
+  
+  
+  
+  .about {
+    position: relative;
+    width: 100%;
+    padding: 45px 0;
+  }
+  
+  .about .section-header {
+    margin-bottom: 30px;
+    margin-left: 0;
+  }
+  
+  .about .about-img {
+    position: relative;
+  }
+  
+  .about .about-img img {
+    position: relative;
+    width: 100%;
+    
+    border-radius: 15px;
+  }
+  
+  
+  
+  
+  @keyframes pulse-border {
+  0% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+    opacity: 0;
+  }
+  }
+  
+  
+  
+  
+  .about .about-content {
+    position: relative;
+  }
+  
+  .about .about-text p {
+    font-size: 16px;
+    
+  }
+  
+  .about .about-text  {
+    position: relative;
+    margin-top: 15px;
+  }
+  
+  @media (max-width: 991.98px) {
+    .about .about-img {
+        margin-bottom: 30px;
+    }
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+  body{
+      line-height: 1.5;
+      font-family: 'Poppins', sans-serif;
+  }
+  *{
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
+  }
+  .container{
+      max-width: 1170px;
+      margin:auto;
+  }
+  .row{
+      display: flex;
+      flex-wrap: wrap;
+  }
+  ul{
+      list-style: none;
+  }
+  .footer{
+      background-color: #24262b;
+      padding: 70px 0;
+  }
+  .footer-col{
+     width: 25%;
+     padding: 0 15px;
+  }
+  .footer-col h4{
+      font-size: 18px;
+      color: #ffffff;
+      text-transform: capitalize;
+      margin-bottom: 35px;
+      font-weight: 500;
+      position: relative;
+  }
+  .footer-col h4::before{
+      content: '';
+      position: absolute;
+      left:0;
+      bottom: -10px;
+      background-color: #e91e63;
+      height: 2px;
+      box-sizing: border-box;
+      width: 50px;
+  }
+  .footer-col ul li:not(:last-child){
+      margin-bottom: 10px;
+  }
+  .footer-col ul li a{
+      font-size: 16px;
+      text-transform: capitalize;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 300;
+      color: #bbbbbb;
+      display: block;
+      transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover{
+      color: #ffffff;
+      padding-left: 8px;
+  }
+  .footer-col .social-links a{
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      background-color: rgba(255,255,255,0.2);
+      margin:0 10px 10px 0;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      color: #ffffff;
+      transition: all 0.5s ease;
+  }
+  .footer-col .social-links a:hover{
+      color: #24262b;
+      background-color: #ffffff;
+  }
+  
+  /*responsive*/
+  @media(max-width: 767px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+  }
+  @media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+  }
+  }
+  .insurance{
+      margin-top: 0px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

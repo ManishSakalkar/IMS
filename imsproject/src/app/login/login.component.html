@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Customer Login</title>
+    
+  </head>
+  <body>
+    <div class="center">
+      <h1>Login</h1>
+      <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+        <div class="txt_field">
+          <input type="text" formControlName="name" class="form-control" >
+          <div *ngIf="profileForm.controls['name'].invalid && (profileForm.controls['name'].dirty || profileForm.controls['name'].touched)" class="alert alert-danger">     
+            Name is required.
+          </div>
+          <label>Username</label>
+        </div>
+        <div class="txt_field">
+          <input type="password"class="form-control" formControlName="name1">
+          <div *ngIf="profileForm.controls['name1'].invalid && (profileForm.controls['name1'].dirty || profileForm.controls['name1'].touched)" class="alert alert-danger">     
+        
+            password is required.
+            </div>
+          <label>Password</label>
+        </div>
+        <div class="pass">Forgot Password?</div>
+      <input  type="submit"  [disabled]="!profileForm.valid"  value="Login" >
+        <div class="signup_link">
+        </div>
+      </form>
+    </div>
+
+  </body>
+</html>
+

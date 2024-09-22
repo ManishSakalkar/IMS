@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <script src="https://use.fontawesome.com/72f3d00eee.js"></script>
+</head>
+
+<body>
+
+    <input type="checkbox" id="check">
+    <!--header area start-->
+    <header style="padding-top: 0px;">
+        <label for="check">
+            <i style="padding-left: 60px;margin-top: 17px;" class="fas fa-bars" id="sidebar_btn"></i>
+        </label>
+        <div class="left_area">
+            <h3>Insurance Management</h3>
+        </div>
+        <div class="right_area">
+            <a href="/thankyou" class="logout_btn">Logout</a>
+        </div>
+    </header>
+   
+    <!--sidebar start-->
+    <div class="sidebar" style="margin-top:60px;">
+        <div class="sidebaritem">
+        <img [src]="images[0]" class="profile_image" alt="profile_image">
+        <h3 style="color: white;">Customer</h3>
+        <a routerLink="/customerdashboard"><i class="fas fa-tachometer-alt"></i><span> Dashboard</span></a>
+        <a routerLink="/add6" routerLinkActive="Active"><i class="fab fa-product-hunt"></i><span>Apply Policy</span></a>
+        <a routerLink="/manishappview" routerLinkActive="Active"><i class="fas fa-history"></i><span>  History</span></a>
+        <a routerLink="/add5" routerLinkActive="active"><i class="fas fa-question-circle"></i><span>  Ask Question</span></a>
+        <a  routerLinkActive="Active"><i class="fas fa-sync-alt"></i><span>  Question History</span></a>
+        </div>
+    </div>
+    <!--sidebar end-->
+
+
+    <div class="container">
+        <div class="Table">
+            <div class="panel panel-primary">
+            <div class="panel-heading">
+        <h6 class="panel-title">Question History</h6>
+    </div>
+    <table class="table table-hover" id="dev-table">
+        <thead>
+        <tr class="bg-success text-white">
+            <td><b>Id</b></td>
+            <td><b>Question</b></td>
+            <td><b>Creation Date</b></td>
+            <td><b>Comment</b></td>
+        </tr>
+    </thead>
+        <tr *ngFor="let s of problems">
+            <td>{{s.id}}</td>
+            <td>{{s.problemname}}</td>
+            <td>{{s.todayd}}</td>
+            <td>{{s.message}}</td>
+
+
+            <!-- <td>
+                <button class="btn btn-danger" (click)="deleteProblem(s.id)">DELETE</button> |
+                <button class="btn btn-info" (click)="editProblem(s.id)">EDIT</button>
+            </td> -->
+        </tr>
+    </table>
+    <span class="text-success">{{message}}</span>
+    </div>
+    </div>
+    
+    </div>
+</body>
+
+</html>
